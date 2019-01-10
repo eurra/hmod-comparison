@@ -2,19 +2,19 @@
 package kp.core;
 
 public class Item {
-    private double value;
-    private double weight;
+    private int value;
+    private int weight;
 
-    public Item(double value, double weight) {
+    public Item(int value, int weight) {
         this.value = value;
         this.weight = weight;
     }
 
-    public double getValue() {
+    public int getValue() {
         return value;
     }
 
-    public double getWeight() {
+    public int getWeight() {
         return weight;
     }
 }

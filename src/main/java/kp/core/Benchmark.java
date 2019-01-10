@@ -1,29 +1,25 @@
 
 package kp.core;
 
-/**
- *
- * @author Usuario
- */
 public class Benchmark {
     public static Benchmark[] getDefaultBenchmarks() {
         return new Benchmark[] {
             new Benchmark(165,
-                new double[] { 23, 31, 29, 44, 53, 38, 63, 85, 89, 82 }, 
-                new double[] { 92, 57, 49, 68, 60, 43, 67, 84, 87, 72 }
+                new int[] { 23, 31, 29, 44, 53, 38, 63, 85, 89, 82 }, 
+                new int[] { 92, 57, 49, 68, 60, 43, 67, 84, 87, 72 }
             ),
             new Benchmark(26,
-                new double[] { 12, 7, 11, 8, 9 },
-                new double[] { 24, 13, 23, 15, 16 }
+                new int[] { 12, 7, 11, 8, 9 },
+                new int[] { 24, 13, 23, 15, 16 }
             ),
         };
     }
     
-    private double capacity;
-    private double weights[];
-    private double profits[];
+    private int capacity;
+    private int weights[];
+    private int profits[];
 
-    public Benchmark(double capacity, double[] weights, double[] profits) {
+    public Benchmark(int capacity, int[] weights, int[] profits) {
         this.capacity = capacity;
         this.weights = weights;
         this.profits = profits;
@@ -40,7 +36,7 @@ public class Benchmark {
         return res;
     }
     
-    public double getMaxCapacity() {
+    public int getMaxCapacity() {
         return capacity;
     }
 }

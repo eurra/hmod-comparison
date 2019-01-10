@@ -5,8 +5,8 @@ import java.util.ArrayList;
 
 public class ItemList {
     private ArrayList<Item> items;
-    private double totalWeigth;
-    private double totalValue;
+    private int totalWeigth;
+    private int totalValue;
 
     public ItemList() {
         this.items = new ArrayList<>();
@@ -20,11 +20,11 @@ public class ItemList {
         return getItemCount() == 0;
     }
     
-    public double getTotalWeigth() {
+    public int getTotalWeigth() {
         return totalWeigth;
     }
     
-    public double getTotalValue() {
+    public int getTotalValue() {
         return totalValue;
     }
     

@@ -27,7 +27,7 @@ public class KnapsackOperators {
     public Statement removeSelectedItemFromList(ItemList il, ItemHandler ih) {
         return () -> {
             Item toRem = ih.getItem();
-            il.removeItem(toRem);
+            il.removeItem(toRem);            
         };
     }
     
@@ -45,6 +45,12 @@ public class KnapsackOperators {
     public Statement printResult(ItemList il) {
         return () -> {
             System.out.println("Result found: " + il.getTotalValue());
+        };
+    }
+    
+    public Statement printItem(ItemHandler ih, String text) {
+        return () -> {
+            System.out.println("Item with value " + ih.getItem().getValue() + " " + text);
         };
     }
 }
